@@ -1,0 +1,87 @@
+/* main stylesheet for BackboneDasboard */
+
+body {
+  font-family: 'Roboto', 'Calibri', 'Lucida-Sans', 'Arial', sans-serif;
+  margin: 1%;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Droid Serif', 'Times New Roman', 'Times', serif;
+  color: rgba(10,60,150, 0.8);
+  text-shadow: 1px 4px 6px #fff, 0 0 0 #000, 1px 4px 6px #def;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.row {
+  display: block;
+  margin: auto;
+  clear: both;
+  position: relative;
+}
+
+.block-half {
+  display: block;
+  float: left;
+  margin: 5px;
+  padding: 2px;
+  position: relative;
+  width: 46%;
+}
+
+.block-third {
+  display: block;
+  float: left;
+  margin: 5px;
+  padding: 2px;
+  position: relative;
+  width: 30%;
+}
+
+.block-quarter {
+  display: block;
+  float: left;
+  margin: 5px;
+  padding: 2px;
+  position: relative;
+  width: 22%;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.close {
+  color: darkgray;
+  margin-top: 20px;
+  border: 1px dashed darkgray;
+  font-weight: bold;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  float: right;
+  position: relative;
+  padding: 5px;
+}
+
+::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+::selection { background: #5af; color: #fff; text-shadow: none; }
+
+/*
+*  Media Queries
+*/
+
+@media only screen
+  and (max-device-width: 760px) {
+  /* tablet breakpoint not yet implemented */
+}
+
+@media only screen
+and (max-device-width: 640px) {
+  /* phablet breakpoint not yet implemented */
+}
+
+@media only screen
+  and (max-device-width: 480px) {
+  /* phone breakpoint not yet implemented */
+}
