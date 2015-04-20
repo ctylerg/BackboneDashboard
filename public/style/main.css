@@ -28,6 +28,14 @@ h1,h2,h3,h4,h5,h6 {
   width: 46%;
 }
 
+.block-half:nth-child(1) {
+  background-color: blue;
+}
+
+.block-half:nth-child(2) {
+  background-color: green;
+}
+
 .block-third {
   display: block;
   float: left;
@@ -37,6 +45,17 @@ h1,h2,h3,h4,h5,h6 {
   width: 30%;
 }
 
+.block-third:nth-child(3) {
+  background-color: pink;
+}
+
+.block-third:nth-child(4) {
+  background-color: grey;
+}
+
+.block-third:nth-child(5) {
+  background-color: lightblue;
+}
 .block-quarter {
   display: block;
   float: left;
@@ -44,6 +63,22 @@ h1,h2,h3,h4,h5,h6 {
   padding: 2px;
   position: relative;
   width: 22%;
+}
+
+.block-quarter:nth-child(6) {
+  background-color: red;
+}
+
+.block-quarter:nth-child(7) {
+  background-color: cyan;
+}
+
+.block-quarter:nth-child(8) {
+  background-color: maroon;
+}
+
+.block-quarter:nth-child(9) {
+  background-color: beige;
 }
 
 .shadow {
@@ -64,6 +99,9 @@ h1,h2,h3,h4,h5,h6 {
   padding: 5px;
 }
 
+
+
+}
 ::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
 ::selection { background: #5af; color: #fff; text-shadow: none; }
 

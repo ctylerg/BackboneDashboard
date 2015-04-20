@@ -1,5 +1,5 @@
 $(document).ready(function(event) {
-  $(document).ready(function(event) {
+
 
     var halfCardView = Backbone.View.extend({
 
@@ -76,5 +76,5 @@ $(document).ready(function(event) {
     var data6 = { title: "heeeeeeeyyyy", content: "good day!"};
     var card6 = new fourthCardView(data6);
 
-  });
+
 });
