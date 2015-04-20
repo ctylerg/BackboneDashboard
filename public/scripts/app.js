@@ -64,7 +64,7 @@ $(document).ready(function(event) {
     var data5 = { title: "look over there", content: "you fell for it again."};
     var card5 = new thirdCardView(data5);
 
-    var data6 = { title: "heeeeeeeyyyy", content: "hi!"};
+    var data6 = { title: "heeeeeeeyyyy", content: "hi!", id: 'bigone'}; //another way to differentiate
     var card6 = new fourthCardView(data6);
 
     var data6 = { title: "heeeeeeeyyyy", content: "wutup!"};
