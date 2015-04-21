@@ -64,17 +64,32 @@ $(document).ready(function(event) {
     var data5 = { title: "look over there", content: "you fell for it again."};
     var card5 = new thirdCardView(data5);
 
-    var data6 = { title: "heeeeeeeyyyy", content: "hi!", id: 'bigone'}; //another way to differentiate
+    var data6 = { title: "heyyyy", content: "hi!", id: 'bigone'}; //another way to differentiate
     var card6 = new fourthCardView(data6);
 
-    var data6 = { title: "heeeeeeeyyyy", content: "wutup!"};
+    var data6 = { title: "heeeeyyyy", content: "wutup!"};
     var card6 = new fourthCardView(data6);
 
-    var data6 = { title: "heeeeeeeyyyy", content: "helllo!"};
+    var data6 = { title: "heeeyyyy", content: "helllo!"};
     var card6 = new fourthCardView(data6);
 
     var data6 = { title: "heeeeeeeyyyy", content: "good day!"};
     var card6 = new fourthCardView(data6);
 
+    var cardModel = Backbone.Model.extend({
+    	initialize: function() {
+    		console.log("Hey, a card is here!");
+        this.fetch();
+    	}
+    });
+    var cardList = Backbone.Collection.extend({
+      model: cardModel,
+      url: '/api/cards',
+      initialize: function () {
+        console.log("Collection is a go");
+        this.fetch();
+      }
+    });
 
+ var listOfCards = new cardList();
 });

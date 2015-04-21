@@ -6,10 +6,23 @@ ActiveRecord::Base.establish_connection(
   :database => 'boneish'
 )
 
+#models
 require './models/card'
 
+#Helper
+def card_parameters
+  request_body = JSON.parse(request.body.read.to_s)
+  { title: request_body["title"], message: request_body["message"] }
+end
+
+
+#routes
 get '/' do
   erb :index
+end
+
+get '/variables' do
+  erb :variables
 end
 
 
@@ -26,20 +39,23 @@ get '/api/cards/:id' do
 end
 
 post '/api/cards' do
-  content_type :json
-  card = Card.create(params[:card])
-  card.to_json
-end
-
-put '/api/cards/:id' do
-  content_type :json
-  card = Card.find(params[:id].to_i).update(params[:card])
+  card = Card.create(card_parameters)
   card.to_json
 end
 
 patch '/api/cards/:id' do
-  content_type :json
-  card = Card.find(params[:id].to_i).update(params[:card])
+  card = Card.find(params[:id].to_i)
+  card.update(card_parameters())
+
+  content_type(:json)
+  card.to_json
+end
+
+put '/api/cards/:id' do
+  card = Card.find(params[:id].to_i)
+  card.update(card_parameters())
+
+  content_type(:json)
   card.to_json
 end
 
